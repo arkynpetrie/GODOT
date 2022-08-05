@@ -1,20 +1,21 @@
-[gd_scene load_steps=63 format=2]
+[gd_scene load_steps=64 format=2]
 
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://sprites/tileset.png" type="Texture" id=2]
-[ext_resource path="res://Camera2D.gd" type="Script" id=3]
-[ext_resource path="res://sprites/SwingingTrap.tscn" type="PackedScene" id=4]
-[ext_resource path="res://sprites/SpikeTrap.tscn" type="PackedScene" id=5]
-[ext_resource path="res://DoorandBotton.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/Camera2D.gd" type="Script" id=3]
+[ext_resource path="res://scenes/SwingingTrap.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/SpikeTrap.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/DoorandBotton.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/SpinningBlade.tscn" type="PackedScene" id=7]
 [ext_resource path="res://sprites/On (38x38).png" type="Texture" id=8]
 [ext_resource path="res://scenes/SpinningBlade.gd" type="Script" id=9]
-[ext_resource path="res://strange_door_closed_anim_strip_10.png" type="Texture" id=10]
-[ext_resource path="res://buttom_pressed.png" type="Texture" id=11]
+[ext_resource path="res://sprites/strange_door_closed_anim_strip_10.png" type="Texture" id=10]
+[ext_resource path="res://sprites/buttom_pressed.png" type="Texture" id=11]
 [ext_resource path="res://sprites/buttom.png" type="Texture" id=12]
-[ext_resource path="res://strange_door_opening_anim_strip_14.png" type="Texture" id=13]
-[ext_resource path="res://DoorandBotton.gd" type="Script" id=14]
-[ext_resource path="res://DoorandBotton2.gd" type="Script" id=15]
+[ext_resource path="res://sprites/strange_door_opening_anim_strip_14.png" type="Texture" id=13]
+[ext_resource path="res://scenes/DoorandBotton.gd" type="Script" id=14]
+[ext_resource path="res://scenes/DoorandBotton2.gd" type="Script" id=15]
+[ext_resource path="res://scenes/SavePoint.tscn" type="PackedScene" id=16]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -49,9 +50,9 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 6, 7 ]
 }
 
-[sub_resource type="Curve2D" id=3]
+[sub_resource type="Curve2D" id=48]
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 144.042, 31.417, 0, 0, 0, 0, 144.042, 47.417, 0, 0, 0, 0, 16.042, 47.417, 0, 0, 0, 0, 16.042, 31.417, 0, 0, 0, 0, 0.0419922, 31.417, 0, 0, 0, 0, 0.0419922, -0.582993, 0, 0, 0, 0, 16.042, -0.582993, 0, 0, 0, 0, 16.042, -16.583, 0, 0, 0, 0, 144.042, -16.583, 0, 0, 0, 0, 144.042, -16.583, 0, 0, 0, 0, 144.042, -0.582993, 0, 0, 0, 0, 160.042, -0.582993, 0, 0, 0, 0, 160.042, 31.417, 0, 0, 0, 0, 144.042, 31.417 )
+"points": PoolVector2Array( 0, 0, 0, 0, 142.414, 30.7461, 0, 0, 0, 0, 142.792, 46.275, 0, 0, 0, 0, 15.5311, 47.0325, 0, 0, 0, 0, 82.9492, 47.0325, 0, 0, 0, 0, 142.042, 46.417, 0, 0, 0, 0, 143.292, 31.417 )
 }
 
 [sub_resource type="CircleShape2D" id=4]
@@ -103,9 +104,9 @@ _data = {
 [sub_resource type="CircleShape2D" id=38]
 radius = 17.69
 
-[sub_resource type="Curve2D" id=39]
+[sub_resource type="Curve2D" id=49]
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, -74, 10, 0, 0, 0, 0, -74, 26, 0, 0, 0, 0, -58, 26, 0, 0, 0, 0, -58, 42, 0, 0, 0, 0, -42, 42, 0, 0, 0, 0, -42, 58, 0, 0, 0, 0, 150, 58, 0, 0, 0, 0, 150, 42, 0, 0, 0, 0, 166, 42, 0, 0, 0, 0, 166, 26, 0, 0, 0, 0, 198, 26, 0, 0, 0, 0, 198, 10 )
+"points": PoolVector2Array( 0, 0, 0, 0, -74.8233, 9.96924, 0, 0, 0, 0, -75.1206, 26.0235, 0, 0, 0, 0, -58.1744, 25.7262, 0, 0, 0, 0, -58.769, 41.1859, 0, 0, 0, 0, -42.4174, 42.3751, 0, 0, 0, 0, -42.4174, 57.8348, 0, 0, 0, 0, 149.937, 58.4294, 0, 0, 0, 0, 150.234, 42.6724, 0, 0, 0, 0, 165.991, 41.4832, 0, 0, 0, 0, 166.288, 26.6181, 0, 0, 0, 0, 197.802, 26.0235, 0, 0, 0, 0, 197.505, 10.5638, 0, 0, 0, 0, 197.802, 26.0235, 0, 0, 0, 0, 196.613, 26.3208, 0, 0, 0, 0, 167.478, 26.3208, 0, 0, 0, 0, 164.505, 41.7805, 0, 0, 0, 0, 150.234, 43.267, 0, 0, 0, 0, 149.342, 56.3483, 0, 0, 0, 0, -42.4175, 58.4294, 0, 0, 0, 0, -43.0121, 42.9698, 0, 0, 0, 0, -59.0664, 41.4832, 0, 0, 0, 0, -59.0664, 26.3209, 0, 0, 0, 0, -75.1207, 24.8344, 0, 0, 0, 0, -74.8234, 9.96927 )
 }
 
 [sub_resource type="RectangleShape2D" id=27]
@@ -727,7 +728,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 [node name="World" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 126, 58 )
+position = Vector2( 104.112, 58 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 2, 0 )
@@ -746,11 +747,11 @@ anims/RESET = SubResource( 1 )
 anims/spin = SubResource( 2 )
 
 [node name="Path2D" type="Path2D" parent="SpinningBlade"]
-curve = SubResource( 3 )
+curve = SubResource( 48 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="SpinningBlade/Path2D"]
-position = Vector2( 144.042, 31.417 )
-rotation = 1.5708
+position = Vector2( 142.414, 30.7461 )
+rotation = 1.54646
 
 [node name="Sprite" type="Sprite" parent="SpinningBlade/Path2D/PathFollow2D"]
 texture = ExtResource( 8 )
@@ -822,7 +823,11 @@ shape = SubResource( 38 )
 position = Vector2( 186, 422 )
 
 [node name="Path2D" parent="SpinningBlade4" index="1"]
-curve = SubResource( 39 )
+curve = SubResource( 49 )
+
+[node name="PathFollow2D" parent="SpinningBlade4/Path2D" index="0"]
+position = Vector2( -74.8233, 9.96924 )
+rotation = 1.58931
 
 [node name="Area2D" parent="." instance=ExtResource( 5 )]
 visible = false
@@ -973,6 +978,12 @@ position = Vector2( 405, 47 )
 [node name="SwingingTrap3" parent="." instance=ExtResource( 4 )]
 position = Vector2( 247, 383 )
 
+[node name="SavePoint" parent="." instance=ExtResource( 16 )]
+position = Vector2( 129.378, 54.0405 )
+
+[node name="SavePoint2" parent="." instance=ExtResource( 16 )]
+position = Vector2( 88.0902, 294.18 )
+
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 23 )
 cell_size = Vector2( 16, 16 )
@@ -984,3 +995,5 @@ tile_data = PoolIntArray( -65509, 0, 0, -65508, 0, 1, -65507, 0, 1, -65506, 0, 1
 
 [editable path="SpinningBlade4"]
 [editable path="DoorandBotton"]
+[editable path="SavePoint"]
+[editable path="SavePoint2"]

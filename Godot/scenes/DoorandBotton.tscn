@@ -1,9 +1,9 @@
 [gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://DoorandBotton.gd" type="Script" id=1]
-[ext_resource path="res://strange_door_closed_anim_strip_10.png" type="Texture" id=2]
-[ext_resource path="res://buttom_pressed.png" type="Texture" id=3]
-[ext_resource path="res://strange_door_opening_anim_strip_14.png" type="Texture" id=4]
+[ext_resource path="res://scenes/DoorandBotton.gd" type="Script" id=1]
+[ext_resource path="res://sprites/strange_door_closed_anim_strip_10.png" type="Texture" id=2]
+[ext_resource path="res://sprites/buttom_pressed.png" type="Texture" id=3]
+[ext_resource path="res://sprites/strange_door_opening_anim_strip_14.png" type="Texture" id=4]
 [ext_resource path="res://sprites/buttom.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]

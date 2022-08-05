@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/strange_door_closed_anim_strip_10.png-afb7cd5f2ad52d106f8c4019f35d58ef.stex"
+path="res://.import/strange_door_opening_anim_strip_14.png-321c026c5f033eba7c35657948e8b39b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://strange_door_closed_anim_strip_10.png"
-dest_files=[ "res://.import/strange_door_closed_anim_strip_10.png-afb7cd5f2ad52d106f8c4019f35d58ef.stex" ]
+source_file="res://sprites/strange_door_opening_anim_strip_14.png"
+dest_files=[ "res://.import/strange_door_opening_anim_strip_14.png-321c026c5f033eba7c35657948e8b39b.stex" ]
 
 [params]
 
