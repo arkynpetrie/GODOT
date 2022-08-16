@@ -30,7 +30,7 @@ func update_animation(anim):
 		state.ATTACK:
 			$AnimationPlayer.play("attack")
 		state.IDLE:
-			$AnimationPlayer.play("idle")
+			$AnimationPlayer.play("Idle")
 		state.JUMP:
 			$AnimationPlayer.play("jump")
 		state.PUSHING:
@@ -74,3 +74,12 @@ func _physics_process(delta):
 	#set gravity
 	velocity.y += gravity * delta
 	velocity = move_and_slide(velocity, Vector2.UP)
+
+
+func _on_DeathZone_area_entered(area):
+	pass # Replace with function body.
+
+func _on_DeathZone_area_entered(area):
+	if area.is_in_group("Deadly"):
+		if GameStats.check_reset() == flase:
+			global_position = GameStats.get_spawn().global_position

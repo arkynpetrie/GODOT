@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scenes/Player.gd" type="Script" id=1]
 [ext_resource path="res://sprites/herochar_spritesheet(new).png" type="Texture" id=2]
@@ -35,9 +35,85 @@ tracks/0/keys = {
 "values": [ 40 ]
 }
 
+[sub_resource type="Animation" id=7]
+resource_name = "attack"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 24, 25, 26, 27 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "fall"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 48, 49, 50 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "jump"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 56, 57, 58 ]
+}
+
 [sub_resource type="Animation" id=4]
 resource_name = "pushing"
 length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 16, 17, 18, 19, 20, 21 ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "roll"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 72, 73, 74 ]
+}
 
 [sub_resource type="Animation" id=3]
 resource_name = "running"
@@ -56,6 +132,10 @@ tracks/0/keys = {
 "values": [ 8, 9, 10, 11, 12, 13 ]
 }
 
+[sub_resource type="CapsuleShape2D" id=9]
+radius = 3.8292
+height = 4.50533
+
 [node name="Player" type="KinematicBody2D" groups=["Player"]]
 position = Vector2( 1.76777, -0.265167 )
 script = ExtResource( 1 )
@@ -67,10 +147,22 @@ vframes = 15
 frame = 40
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( -5.04644, -2.12092, -2.98172, -4.95254, 1.16833, -4.94719, 3.00779, -2.55589, 3.06035, 7.03558, 2.03261, 8.02573, -4.00843, 7.98159, -4.98745, 7.08186 )
+polygon = PoolVector2Array( -5.04644, -2.12092, -2.98172, -4.95254, 1.20146, -4.9688, 2.97436, -1.05595, 2.95095, 6.99745, 1.96769, 7.9339, -4.00213, 8.00413, -4.93857, 7.06769 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Idle = SubResource( 1 )
 anims/RESET = SubResource( 2 )
+anims/attack = SubResource( 7 )
+anims/fall = SubResource( 5 )
+anims/jump = SubResource( 6 )
 anims/pushing = SubResource( 4 )
+anims/roll = SubResource( 8 )
 anims/running = SubResource( 3 )
+
+[node name="DeathZone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
+position = Vector2( -1.11975, 1.09025 )
+shape = SubResource( 9 )
+
+[connection signal="area_entered" from="DeathZone" to="." method="_on_DeathZone_area_entered"]
