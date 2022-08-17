@@ -64,7 +64,7 @@ rotation = -3.13964
 texture = ExtResource( 1 )
 hframes = 8
 
-[node name="Area2D" type="Area2D" parent="Path2D/PathFollow2D/Sprite"]
+[node name="Area2D" type="Area2D" parent="Path2D/PathFollow2D/Sprite" groups=["Deadly"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/Sprite/Area2D"]
 shape = SubResource( 4 )

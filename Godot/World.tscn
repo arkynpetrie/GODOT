@@ -858,15 +858,6 @@ script = ExtResource( 20 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 99.2975, 83.9504 )
-__meta__ = {
-"_edit_group_": true
-}
-speed = null
-jump_speed = null
-gravity = null
-slide_speed = null
-friction = null
-acceleration = null
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 2, 0 )
