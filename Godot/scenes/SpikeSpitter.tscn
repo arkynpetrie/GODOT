@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://SpikeSpitter.gd" type="Script" id=1]
+[ext_resource path="res://scenes/SpikeSpitter.gd" type="Script" id=1]
 [ext_resource path="res://sprites/trap_spikes_anim_strip_7.png" type="Texture" id=2]
 [ext_resource path="res://spikes_trap.png" type="Texture" id=3]
 
