@@ -8,7 +8,7 @@ var music_tracks = {
 
 }
 var sound_effects = {
-	"jump":"res://sfx/RXQHWYP-jump.mp3",
+	"jump":"res://sfx/cartoon-jump-6462.mp3",
 	"dead":"res://sfx/videogame-death-sound-43894.mp3",
 	
 }
@@ -34,5 +34,6 @@ func play_sound_effect(sfx):
 	var sound = AudioStreamPlayer.new()
 	sound.stream = load(sound_effects[sfx])
 	add_child(sound)
+	sound.play()
 	yield(sound,"finished")
 	sound.queue_free()
