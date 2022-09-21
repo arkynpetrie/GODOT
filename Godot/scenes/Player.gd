@@ -54,6 +54,7 @@ func get_input():
 		velocity.x = move_toward(velocity.x, 0, friction)
 	
 func _physics_process(delta):
+
 	get_input()
 	print(is_on_floor())
 	if velocity == Vector2.ZERO:
