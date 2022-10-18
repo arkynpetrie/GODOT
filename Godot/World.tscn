@@ -1,4 +1,4 @@
-[gd_scene load_steps=170 format=2]
+[gd_scene load_steps=171 format=2]
 
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://sprites/tileset.png" type="Texture" id=2]
@@ -24,6 +24,7 @@
 [ext_resource path="res://sprites/nature-paltformer-tileset-16x16.png" type="Texture" id=22]
 [ext_resource path="res://scenes/SpinningBlade.tscn" type="PackedScene" id=23]
 [ext_resource path="res://scenes/GoblinEnemy.tscn" type="PackedScene" id=24]
+[ext_resource path="res://scenes/Flag.tscn" type="PackedScene" id=25]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -2035,7 +2036,7 @@ position = Vector2( 126.518, 373.816 )
 position = Vector2( 107.934, 373.816 )
 
 [node name="Player" parent="." groups=["Climber"] instance=ExtResource( 1 )]
-position = Vector2( 99.439, 72.5611 )
+position = Vector2( 199.412, 165.841 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -2107,6 +2108,9 @@ position = Vector2( 759.844, 344.726 )
 
 [node name="GoblinEnemy2" parent="." instance=ExtResource( 24 )]
 position = Vector2( 508.193, 215.308 )
+
+[node name="Flag" parent="." instance=ExtResource( 25 )]
+position = Vector2( 127.775, 645.395 )
 
 [connection signal="body_entered" from="DoorandBotton2/Button/Area2D" to="DoorandBotton2" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="DoorandBotton3/Button/Area2D" to="DoorandBotton3" method="_on_Area2D_body_entered"]
