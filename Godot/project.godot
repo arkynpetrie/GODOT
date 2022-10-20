@@ -18,6 +18,7 @@ config/icon="res://sprites/icon.png"
 
 GameStats="*res://scenes/game_stats.gd"
 SoundPlayer="*res://scripts/sound_player.gd"
+OptionsMenu="*res://Options Menu.gd"
 
 [display]
 
