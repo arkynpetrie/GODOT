@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Jungle_run-removebg-preview (1).png-7951ec90f04029186b9b10b8cdbd39d4.stex"
+path="res://.import/unavoidable_spikes_just_roller_04.png-e1c866781a1396a01afe38f4ccb201ed.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Jungle_run-removebg-preview (1).png"
-dest_files=[ "res://.import/Jungle_run-removebg-preview (1).png-7951ec90f04029186b9b10b8cdbd39d4.stex" ]
+source_file="res://My Own Traps/unavoidable_roller/unavoidable_spikes_just_roller_04.png"
+dest_files=[ "res://.import/unavoidable_spikes_just_roller_04.png-e1c866781a1396a01afe38f4ccb201ed.stex" ]
 
 [params]
 
